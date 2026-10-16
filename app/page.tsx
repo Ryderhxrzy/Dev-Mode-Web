@@ -11,7 +11,6 @@ import {
   Usb,
   EyeOff,
   Download,
-  Star,
   ArrowRight,
   Sliders,
   Crosshair,
@@ -23,6 +22,7 @@ import {
 import {
   InteractiveHeroMockup,
   CopyCommandPill,
+  GitHubStarButton,
 } from "./components/InteractiveHeroMockup";
 import {
   TerminalSimulator,
@@ -135,18 +135,10 @@ export default function HomePage() {
 
           {/* Right CTA Buttons */}
           <div className="flex items-center gap-2.5 sm:gap-3">
-            <a
-              href="https://github.com/Ryderhxrzy/Dev-Mode-Mobile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-[#080F0C] px-3.5 py-2 text-xs sm:text-sm font-medium text-slate-200 transition hover:border-[#22C55E]/50 hover:text-white"
-            >
-              <Github className="h-4 w-4" />
-              <span className="hidden sm:inline">Star on GitHub</span>
-              <span className="inline-flex items-center gap-0.5 rounded bg-white/10 px-1.5 py-0.5 font-mono text-[11px] text-amber-300">
-                <Star className="h-3 w-3 fill-amber-300" />
-              </span>
-            </a>
+            <GitHubStarButton
+              repo="Ryderhxrzy/Dev-Mode-Mobile"
+              variant="navbar"
+            />
 
             <a
               href="https://github.com/Ryderhxrzy/Dev-Mode-Mobile/releases"
@@ -206,15 +198,10 @@ export default function HomePage() {
                     </span>
                   </a>
 
-                  <a
-                    href="https://github.com/Ryderhxrzy/Dev-Mode-Mobile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-[#080F0C]/90 px-5 py-3.5 font-display text-sm sm:text-base font-semibold text-white transition hover:border-[#22C55E]/50 hover:bg-[#0D1612]"
-                  >
-                    <Github className="h-5 w-5 text-slate-300" />
-                    View on GitHub
-                  </a>
+                  <GitHubStarButton
+                    repo="Ryderhxrzy/Dev-Mode-Mobile"
+                    variant="hero"
+                  />
 
                   {/* Copyable CLI Pill */}
                   <CopyCommandPill command="npx dev-mode-cli on" />
