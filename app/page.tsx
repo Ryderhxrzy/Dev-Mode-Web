@@ -18,6 +18,8 @@ import {
   Sparkles,
   ExternalLink,
   FileCode2,
+  Coffee,
+  Heart,
 } from "lucide-react";
 import {
   InteractiveHeroMockup,
@@ -134,7 +136,18 @@ export default function HomePage() {
           </nav>
 
           {/* Right CTA Buttons */}
-          <div className="flex items-center gap-2.5 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a
+              href="https://ko-fi.com/V8C228TP47"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Support Dev Mode on Ko-fi"
+              className="hidden sm:inline-flex items-center gap-1.5 rounded-xl border border-[#06B6D4]/35 bg-[#06B6D4]/10 px-3.5 py-2 text-xs sm:text-sm font-semibold text-[#22D3EE] transition hover:border-[#22D3EE] hover:bg-[#06B6D4]/20 hover:text-white"
+            >
+              <Coffee className="h-4 w-4 text-[#22D3EE]" />
+              <span className="hidden lg:inline">Ko-fi</span>
+            </a>
+
             <GitHubStarButton
               repo="Ryderhxrzy/Dev-Mode-Mobile"
               variant="navbar"
@@ -866,6 +879,35 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+
+            {/* Support the Project / Ko-fi Callout Banner */}
+            <div className="mt-16 cyber-card rounded-3xl border border-[#22C55E]/30 bg-gradient-to-r from-[#080F0C] via-[#0D1612] to-[#080F0C] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="space-y-2 text-center md:text-left max-w-2xl">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#22C55E]/35 bg-[#22C55E]/10 px-3 py-1 font-mono text-xs font-semibold text-[#22C55E]">
+                  <Heart className="h-3.5 w-3.5 fill-[#22C55E] text-[#22C55E]" />
+                  <span>100% FREE, OPEN-SOURCE &amp; AD-FREE</span>
+                </div>
+                <h3 className="font-display text-2xl font-bold text-white">
+                  Support Dev Mode Development on Ko-fi
+                </h3>
+                <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+                  Dev Mode is built with zero ads, zero paywalls, and zero
+                  telemetry. If this tool saves you time during Android
+                  debugging, consider buying the developer a coffee!
+                </p>
+              </div>
+
+              <a
+                href="https://ko-fi.com/V8C228TP47"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-2.5 rounded-xl bg-[#22C55E] px-6 py-3.5 font-display text-sm sm:text-base font-bold text-[#050D0A] shadow-[0_0_30px_rgba(34,197,94,0.4)] transition hover:bg-emerald-400 active:scale-[0.99]"
+              >
+                <Coffee className="h-5 w-5" />
+                <span>Support on Ko-fi</span>
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </section>
       </main>
@@ -984,6 +1026,17 @@ export default function HomePage() {
                   >
                     <Terminal className="h-4 w-4" />
                     Dev Mode CLI Repository (v1.0.11)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://ko-fi.com/V8C228TP47"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-semibold text-[#22D3EE] hover:text-white transition"
+                  >
+                    <Coffee className="h-4 w-4" />
+                    Support the Project on Ko-fi
                   </a>
                 </li>
               </ul>
